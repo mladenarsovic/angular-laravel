@@ -81,6 +81,8 @@ class ContactsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $contact = Contact::findOrFail($id);
+        $contact->delete();
+        return $contact;
     }
 }
