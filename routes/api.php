@@ -28,7 +28,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::put('contacts/{id}', 'ContactController@update');
 
 
-Route::post('login', 'Auth\LoginController@Authenticate');
-Route::middleware('jwt')->resource('contacts', 'ContactsController');
+Route::post('login','Auth\LoginController@authenticate');
+Route::get('login','Auth\LoginController@authenticate');
+Route::middleware('jwt')->resource('contacts','ContactsController');
+
 
 
