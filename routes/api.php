@@ -29,7 +29,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 
 Route::post('login','Auth\LoginController@authenticate');
-Route::get('login','Auth\LoginController@authenticate');
+// Route::get('login','Auth\LoginController@authenticate');
 Route::middleware('jwt')->resource('contacts','ContactsController');
 
 
